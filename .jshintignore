@@ -1,0 +1,12 @@
+build
+build/**/*.js
+node_modules
+node_modules/**/*.js
+cache
+cache/**/*.js
+dev
+dev/**/*.js
+data
+data/**/*.js
+public/javascripts/lib
+public/javascripts/lib/**/*.js

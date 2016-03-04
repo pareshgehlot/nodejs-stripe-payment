@@ -1,0 +1,112 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="/javascripts/main.js"></script>
+<h1>Transactions page</h1>
+<p>Your token:<span id="token"><%=token%></span></p>
+<% if(alreadyCustomer===false){%>
+
+<form class="form-horizontal" name="payment_form" id="payment_form">
+	<div class="form-group">
+		<h2 class="col-sm-5">Create Stripe Payments</h2>
+    </div>  
+
+    <div class="form-group">	
+		<div class="col-sm-10">				
+			<p class="payment-errors"></p>
+    	</div>
+    </div>
+
+    <div class="form-group">
+		<label class="col-sm-2 control-label" for="amount">Amount:</label>
+		<div class="col-sm-3">
+			<input class="form-control" type="number" name="amount" id="amount"><br>
+    	</div>  			
+    </div>  	
+
+    <div class="form-group">    
+		<label class="col-sm-2 control-label" for="currency">Currency: </label>
+		<div class="col-sm-3">
+			<input class="form-control" type="text" name="currency" id="currency"><br>
+    	</div>  			
+    </div>  		
+    
+    <div class="form-group">        		
+		<label class="col-sm-2 control-label" for="cardnumber">Card number </label>
+		<div class="col-sm-3">		
+			<input class="form-control card-number" type="text" name="customerid" id="cardnumber"><br>
+    	</div>  			
+    </div>  	
+
+
+    <div class="form-group">        		
+		<label class="col-sm-2 control-label" for="cvc">CVC: </label>
+		<div class="col-sm-3">				
+			<input class="form-control card-cvc" type="number" name="cvc" id="cvc"><br>
+    	</div>  			
+    </div>  			
+
+
+    <div class="form-group">        		
+		<label class="col-sm-2 control-label" for="card-expiry-month">Expired Month: </label>
+		<div class="col-sm-3">				
+			<input class="form-control card-expiry-month" type="number" name="card-expiry-month" id="card-expiry-month">
+    	</div>  			
+    </div>  		
+	<br>
+
+    <div class="form-group">
+		<label class="col-sm-2 control-label" for="card-expiry-year">Expired Year: </label>
+		<div class="col-sm-3">				
+			<input class="form-control card-expiry-year" type="number" name="card-expiry-year" id="card-expiry-year">
+    	</div>  			
+    </div>  					
+	<br>
+    <div class="form-group">	
+		<div class="col-sm-10">				
+			<input class="btn btn-success submittransaction" type="button" id="submittransaction" value="Submit">
+    	</div>
+    </div>
+
+
+
+</form>
+
+
+
+<% }else{%>
+
+<form class="form-horizontal">
+	<div class="form-group">
+		<h2 class="col-sm-5">Create Stripe Payments</h2>
+    </div>  
+
+
+    <div class="form-group">	
+		<div class="col-sm-10">				
+			<p class="payment-errors"></p>
+    	</div>
+    </div>
+
+	<input type="hidden" id="customerId" name="customerId" value =<%=customerId%>>    
+    <div class="form-group">
+		<label class="col-sm-2 control-label" for="amount">Amount:</label>
+		<div class="col-sm-3">				
+			<input class="form-control" type="number" name="amount" id="amount"><br>
+    	</div>
+    </div>
+
+    <div class="form-group">
+		<label class="col-sm-2 control-label" for="currency">Currency: </label>
+		<div class="col-sm-3">				
+			<input class="form-control" type="text" name="currency" id="currency"><br>
+    	</div>
+    </div>
+
+    <div class="form-group">	
+		<div class="col-sm-3">				
+			<input class="btn btn-success type="button submittransaction" id="submitalreadydonetransaction" value="Submit">
+    	</div>
+    </div>			
+
+
+</form>
+<% }%>

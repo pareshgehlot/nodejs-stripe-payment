@@ -1,0 +1,5 @@
+{
+    "mongoURI": "mongodb://username:password@server/database",
+    "secret": "thisisasecret",
+    "stripeApiKey": "apikey"
+}

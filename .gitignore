@@ -1,0 +1,14 @@
+*.[oa]
+*~
+._*
+.DS_Store
+!.htaccess
+!.htpasswd
+!.gitignore
+*.espressostorage
+*.esproj
+Thumbs.db
+/nbproject
+node_modules
+config/conf.d/**/*.json
+dev/

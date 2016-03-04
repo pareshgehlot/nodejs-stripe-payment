@@ -1,0 +1,25 @@
+{
+  "name": "restApp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "body-parser": "~1.14.2",
+    "cookie-parser": "^1.4.1",
+    "debug": "~2.2.0",
+    "deco": "^0.12.3",
+    "ejs": "~2.3.4",
+    "express": "~4.13.3",
+    "express-ejs-layouts": "~2.0.0",
+    "express-session": "^1.13.0",
+    "jsonwebtoken": "~5.5.4",
+    "mongoose": "~4.3.5",
+    "morgan": "~1.6.1",
+    "pmx": "^0.6.0",
+    "serve-favicon": "~2.3.0",
+    "stripe": "~4.1.0"
+  }
+}
